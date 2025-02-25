@@ -1,0 +1,9 @@
+FROM staphb/spades:3.15.5
+
+WORKDIR /data
+
+COPY scripts/spades.sh /scripts/spades.sh
+
+RUN chmod +x /scripts/spades.sh
+
+CMD ["/scripts/spades.sh"]

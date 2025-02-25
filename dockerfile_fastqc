@@ -1,0 +1,9 @@
+FROM staphb/fastqc:0.11.9
+
+WORKDIR /data
+
+COPY scripts/fastqc.sh /scripts/fastqc.sh
+
+RUN chmod +x /scripts/fastqc.sh
+
+CMD ["/scripts/fastqc.sh"]
