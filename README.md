@@ -197,9 +197,11 @@ ls -lh ${RESULTS_DIR}/contigs.fasta
 
 ## 构建docker镜像
 ```powershell
-docker build -t bio_fastqc -f dockerfile_fastqc
-docker build -t bio_spades -f dockerfile_spades
+docker build -t bio_fastqc -f dockerfile_fastqc .
+docker build -t bio_spades -f dockerfile_spades .
 ```
+`docker build [OPTIONS] PATH | URL | -`
+`.`就是用PATH来构建镜像，指的是当前路径
 `-t`（`--tag`）：用于命名镜像并添加标签，格式为`<name>:<tag>`，如`fastqc:latest`
 `-f`（`--file`）：指定自定义dockerfile的位置，而非默认位置当前目录下的dockerfile
 
